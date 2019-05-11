@@ -2,7 +2,10 @@ import alpaca_trade_api as tradeapi
 from iexfinance.refdata import get_symbols
 import random
 
-api = tradeapi.REST('AKQ44XUEJY1T01Q9I0DJ','D3cEq/UUv3F8vTqZ92mFUItBufvjzjapFzvSO0Ud','https://paper-api.alpaca.markets')
+# Gets account.txt as a list of lists
+account = open('account.txt','r').read().splitlines()
+api = tradeapi.REST(account[0].split()[1],account[1].split()[1],account[2].split()[1])
+
 account = api.get_account()
 print("$"+account.buying_power+" left in purchasing power.")
 
