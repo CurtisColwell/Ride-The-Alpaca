@@ -1,4 +1,4 @@
-# ridethealpaca
+# Ride The Alpaca
 
 A few short scripts for automated trading with the Alpaca API. Run scripts with Python 3.
 
