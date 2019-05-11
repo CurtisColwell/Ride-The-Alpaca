@@ -1,0 +1,3 @@
+publickey:  PKATNIRLZT4O89WBWI3I
+privatekey: K9jBfTQlauku70dfsOqWryZcLcx9RWXDqsdRth3m
+endpoint:   https://paper-api.alpaca.markets

@@ -2,7 +2,10 @@ import alpaca_trade_api as tradeapi
 from iexfinance.stocks import Stock
 import csv
 
-api = tradeapi.REST('PKATNIRLZT4O89WBWI3I','K9jBfTQlauku70dfsOqWryZcLcx9RWXDqsdRth3m','https://paper-api.alpaca.markets')
+# Gets account.txt as a list of lists
+account = open('account.txt','r').read().splitlines()
+api = tradeapi.REST(account[0].split()[1],account[1].split()[1],account[2].split()[1])
+
 account = api.get_account()
 print("$"+account.buying_power+" left in cash.")
 
